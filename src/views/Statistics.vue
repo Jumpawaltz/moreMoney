@@ -1,7 +1,5 @@
 <template>
-  <div>statistics
-    <Nav/>
-  </div>
+<Layout>Statistics.vue</Layout>
 </template>
 
 <script lang="ts">
