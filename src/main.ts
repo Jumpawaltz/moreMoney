@@ -10,7 +10,6 @@ Vue.config.productionTip = false;
 
 Vue.component('Nav', Nav);
 Vue.component('Layout',Layout)
-
 new Vue({
   router,
   store,

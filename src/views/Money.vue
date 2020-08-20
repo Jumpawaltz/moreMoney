@@ -1,5 +1,7 @@
 <template>
-<Layout>Money.vue</Layout>
+<Layout>
+  money.vue
+</Layout>
 </template>
 
 <script lang="ts">
