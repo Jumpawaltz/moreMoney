@@ -16,6 +16,7 @@
   export default class Types extends Vue {
     type = '-';
     @Prop(Number) xxx: number | undefined;
+
     selectType(type: string) {
       if (type !== '+' && type !== '-') {
         throw  new Error('type is unknown');
