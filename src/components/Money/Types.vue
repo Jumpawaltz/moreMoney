@@ -9,28 +9,21 @@
 
 <script lang="ts">
   import Vue from 'vue';
-  import {Component, Prop} from 'vue-property-decorator';
+  import {Component, Prop, Watch} from 'vue-property-decorator';
 
   @Component
 
   export default class Types extends Vue {
     type = '-';
-    @Prop(Number) xxx: number | undefined;
+    @Prop() readonly value!: string;
 
     selectType(type: string) {
+      console.log(type);
       if (type !== '+' && type !== '-') {
         throw  new Error('type is unknown');
       }
       this.type = type;
-    }
-
-    mounted() {
-      console.log(this.xxx);
-      if (this.xxx === undefined) {
-        console.log('undefined');
-      } else {
-        console.log(this.xxx.toString());
-      }
+      this.$emit('update-value', type);
     }
   }
 </script>
@@ -41,7 +34,6 @@
     display: flex;
     text-align: center;
     font-size: 24px;
-
     > li {
       width: 50%;
       height: 64px;
@@ -49,7 +41,6 @@
       justify-content: center;
       align-items: center;
       position: relative;
-
       &.selected::after {
         content: '';
         position: absolute;
