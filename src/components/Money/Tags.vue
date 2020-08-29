@@ -29,6 +29,7 @@
         this.selectedTags.push(tag);
       }
       this.$emit('update:selected', this.selectedTags);
+      console.log(this.selectedTags);
 
     }
 
@@ -72,6 +73,7 @@
           background: darken($bg, 50%);
           color: white;
         }
+
       }
     }
     > .new {
