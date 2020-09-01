@@ -42,7 +42,7 @@
     }
 
     saveRecord() {
-      const record2 = JSON.parse(JSON.stringify(this.record));
+      const record2 = model.clone(this.record);
       record2.createdAt = new Date();
       this.recordList.push(record2);
     }
